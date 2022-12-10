@@ -17,7 +17,7 @@ function App() {
           <p>
             Nick Kuhn
             <br />
-            Software Engineer
+            Technology Leader
           </p>
           <button onClick={() => setContent('overview')}>
             Overview
