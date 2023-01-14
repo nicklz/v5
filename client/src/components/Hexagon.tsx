@@ -28,11 +28,12 @@ export const Hexagon: React.FunctionComponent = () => {
 
   return (
     <mesh ref={hexagonRef}>
+
       <shapeGeometry
         attach="geometry"
         args={[createHexagonShape(), 32]}
       />
-      <meshStandardMaterial attach="material" color={'#ff0000'} />
+      <meshStandardMaterial color={'orange'} />
     </mesh>
   );
 }

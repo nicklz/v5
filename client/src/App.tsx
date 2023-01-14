@@ -11,12 +11,10 @@ function App() {
 
   return (
     <>
-      <h1>HELLO dsafadfsfdsadsaf</h1>
-      <h1>HELLO dsafadfsfdsadsaf</h1>
-      <h1>HELLO dsafadfsfdsadsaf</h1>
-      <h1>HELLO dsafadfsfdsadsaf</h1>
-      <h1>HELLO dsafadfsfdsadsaf</h1>
+
       <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
         <Hexagon />
       </Canvas>
     </>
