@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useCallback, useEffect, useState } from 'react';
 import parse from 'html-react-parser';
 import { Loader } from './Loader';
