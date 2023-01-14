@@ -1,18 +1,29 @@
 import React, { useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
-import { Mesh, Shape, ShapeGeometry, MeshStandardMaterial } from 'three';
-
+import { Mesh, Shape, Path, ShapeGeometry, MeshStandardMaterial } from 'three';
+//create a react three fiber functional component of a hexagon. the hexagon will be 10% of its width in height. it will have another smaller hexagon cut out from it's center. the component will be written in typescript
 const createHexagonShape = () => {
-  const hexagon = new Shape();
-  hexagon.moveTo(0, 1);
-  for (let i = 1; i <= 6; i++) {
-    const angle = (i / 6) * Math.PI * 2;
-    const x = Math.cos(angle);
-    const y = Math.sin(angle);
-    hexagon.lineTo(x, y);
-  }
-  hexagon.closePath();
-  return hexagon;
+  const shape = new Shape();
+  const hole = new Path();
+  //create main hexagon shape
+  shape.moveTo(0, 0);
+  shape.lineTo(1, 0);
+  shape.lineTo(1.5, 0.866);
+  shape.lineTo(1, 1.732);
+  shape.lineTo(0, 1.732);
+  shape.lineTo(-0.5, 0.866);
+  shape.lineTo(0, 0);
+  //create hole hexagon shape
+  hole.moveTo(0.3, 0.3);
+  hole.lineTo(0.7, 0.3);
+  hole.lineTo(0.95, 0.866);
+  hole.lineTo(0.7, 1.432);
+  hole.lineTo(0.3, 1.432);
+  hole.lineTo(0.05, 0.866);
+  hole.lineTo(0.3, 0.3);
+  shape.holes.push(hole);
+
+  return shape;
 }
 
 
@@ -33,7 +44,7 @@ export const Hexagon: React.FunctionComponent = () => {
         attach="geometry"
         args={[createHexagonShape(), 32]}
       />
-      <meshStandardMaterial color={'orange'} />
+      <meshStandardMaterial color={'silver'} />
     </mesh>
   );
 }
