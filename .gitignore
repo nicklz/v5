@@ -14,7 +14,7 @@ api/sites/default/files/
 /node_modules
 /.pnp
 .pnp.js
-
+client/buil
 # testing
 /coverage
 
