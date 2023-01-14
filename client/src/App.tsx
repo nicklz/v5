@@ -15,7 +15,7 @@ function App() {
     <>
       <div className="app">
         <header className="app-header">
-          <Canvas>
+          <Canvas className="app-logo">
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Hexagon />

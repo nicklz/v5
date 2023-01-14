@@ -24,11 +24,14 @@ body {
 }
 
 .app-logo {
-  border: 11px solid #fff;
-  box-shadow: 1px 1px 28px #fff;
-  height: 300px;
-  padding: 10px;
-  width: 300px;
+  max-block-size: 33vh;
+}
+
+
+@media (min-width: 800px) {
+  .app-logo {
+    max-block-size: 50vh;
+  }
 }
 
 .app-header {
@@ -133,6 +136,7 @@ article {
   margin-block-end: 5px;
 }
 
+
 @media (max-width: 1200px) {
   body {
     overflow: inherit;
@@ -142,14 +146,6 @@ article {
     grid-template-columns: 1fr;
     max-block-size: 100vh;
     overflow: hidden;
-  }
-
-  .app-logo {
-    margin-block-start: 0;
-    width: 200px;
-    height: 200px;
-    box-shadow: 1px 1px 28px #000;
-    background: rgba(0, 0, 0, .5);
   }
 
   article {
