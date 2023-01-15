@@ -88,7 +88,7 @@ export const PortfolioItem: React.FunctionComponent<portfolioItemProps> = ({
             <>
               <h1>{data?.title}</h1>
               <img alt="portfolio" src={data?.image}></img>
-              <p><a href={data?.url}>{data?.url}</a></p>
+              <p><a target={"_blank"} href={data?.url}>{data?.url}</a></p>
               <p className="portfolio-body">{data?.body}</p>
             </>
           )}
