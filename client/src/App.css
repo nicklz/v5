@@ -106,8 +106,7 @@ article {
 
 @media (max-width: 800px) {
   .portfolio-body {
-    max-height: 50vh;
-    overflow-y: scroll;
+    margin-block-end: 20vh;
   }
 }
 
