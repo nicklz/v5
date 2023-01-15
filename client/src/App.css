@@ -101,6 +101,7 @@ article {
 
 .portfolio-item a {
   color: white !important;
+  text-decoration: none;
 }
 
 @media (max-width: 800px) {
