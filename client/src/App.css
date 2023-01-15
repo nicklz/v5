@@ -99,6 +99,10 @@ article {
   z-index: 99;
 }
 
+.portfolio-item a {
+  color: white !important;
+}
+
 @media (max-width: 800px) {
   .portfolio-body {
     max-height: 50vh;
