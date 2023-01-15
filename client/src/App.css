@@ -99,6 +99,13 @@ article {
   z-index: 99;
 }
 
+@media (max-width: 800px) {
+  .portfolio-body {
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+}
+
 .listing ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
