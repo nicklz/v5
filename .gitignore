@@ -1,3 +1,5 @@
+error_log
+erro_logA
 *sites/*/settings*.php
 *sites/*/services*.yml
 *settings.php
@@ -9,7 +11,7 @@ vendor
 api/error_log
 api/sites/default/files/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+*error_log
 # dependencies
 /node_modules
 /.pnp
