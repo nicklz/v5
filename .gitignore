@@ -16,7 +16,8 @@ api/sites/default/files/
 .pnp.js
 # testing
 /coverage
-
+api/sites/default/default
+api/sites/default/default.services.yml
 # production
 /build
 
