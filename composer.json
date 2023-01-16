@@ -43,31 +43,31 @@
             }
         },
         "installer-paths": {
-            "web/core": [
+            "api/core": [
                 "type:drupal-core"
             ],
-            "web/libraries/{$name}": [
+            "api/libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "web/modules/contrib/{$name}": [
+            "api/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "web/profiles/contrib/{$name}": [
+            "api/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "web/themes/contrib/{$name}": [
+            "api/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
-            "web/modules/custom/{$name}": [
+            "api/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "web/profiles/custom/{$name}": [
+            "api/profiles/custom/{$name}": [
                 "type:drupal-custom-profile"
             ],
-            "web/themes/custom/{$name}": [
+            "api/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
         },
