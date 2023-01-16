@@ -52,7 +52,6 @@ export const PortfolioItem: React.FunctionComponent<portfolioItemProps> = ({
         // Get data from D9 API
         const data: portfolioItemData = await fetchData(endpoint);
         setTimeout(function () {
-          console.log(data);
           // Make a note that the fetch completed
           data.fetched = true;
           // @ts-ignore - TODO: again write a custom API

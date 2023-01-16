@@ -17,8 +17,6 @@ export const PortfolioListItem: React.FunctionComponent<portfolioListItemProps> 
 
   const [open, setOpen] = useState(false);
 
-  console.log('open', open);
-
   return (
     <>
       <li>

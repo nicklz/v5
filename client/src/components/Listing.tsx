@@ -47,7 +47,6 @@ export const Listing: React.FunctionComponent<listingProps> = ({
         // Get data from D9 API
         const data: listingData = await fetchData(endpoint);
 
-        console.log(data);
         setTimeout(function () {
           // Make a note that the fetch completed
           data.fetched = true;
