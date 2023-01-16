@@ -1,3 +1,5 @@
+
+error_log*
 error_log
 erro_logA
 *sites/*/settings*.php
