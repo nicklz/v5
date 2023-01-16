@@ -31,3 +31,5 @@ api/sites/default/default.services.yml
 *npm-debug.log*
 *yarn-debug.log*
 *yarn-error.log*
+
+api/sites/default/default
