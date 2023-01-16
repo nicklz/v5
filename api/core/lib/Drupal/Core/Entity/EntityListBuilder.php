@@ -46,7 +46,7 @@ class EntityListBuilder extends EntityHandlerBase implements EntityListBuilderIn
    *
    * @var int|false
    */
-  protected $limit = 50;
+  protected $limit = 500;
 
   /**
    * {@inheritdoc}
