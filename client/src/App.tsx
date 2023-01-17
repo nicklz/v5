@@ -41,7 +41,7 @@ function App() {
             Resume
           </button>
 
-          <code className="footer">Powered by Drupal 10- + React Three Fiber (Typescript)<br />NICKLZ © 2023</code>
+          <code className="footer">Powered by Drupal 10 + React Three Fiber (Typescript)<br />NICKLZ © 2023</code>
         </header>
         <main>
           {page === 'overview' && (
