@@ -14,7 +14,23 @@ declare global {
 }
 
 function App() {
-  const [page, setContent] = useState<string>('music');
+  const [page, setContent] = useState<string>('');
+
+  useEffect(() => {
+    // Set content to 'close' on mobile devices
+    const checkMobile = () => {
+      if (window.innerWidth > 800) {
+        setContent('close');
+      }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     // Load Spotify SDK
@@ -66,7 +82,7 @@ function App() {
           <button onClick={() => window.open("https://www.youtube.com/@NICKLZ22/videos", "_blank")}>
             Videos
           </button>
-          <button onClick={() => setContent('music')}>
+          <button onClick={() => window.open("https://open.spotify.com/artist/7MhFAqUQR638zLxShAWudg?si=BsVfCXySTP2_jeEoxrDOmA", "_blank")}>
             Music
           </button>
           <button onClick={() => window.open("https://www.linkedin.com/in/nicklz/", "_blank")}>
@@ -109,7 +125,7 @@ function App() {
               </article>
             </>
           )}
-          {page === 'music' && (
+          {page === 'close' && (
             <>
               <article className="content">
                 <span className="close" onClick={() => setContent('close')}>
@@ -122,7 +138,7 @@ function App() {
             </>
           )}
         </main>
-      </div>
+      </div >
     </>
   )
 }
