@@ -29,19 +29,25 @@ function App() {
             Overview
           </button>
           <button onClick={() => setContent('skills')}>
-            Skills
+            Code
           </button>
           <button onClick={() => setContent('portfolio')}>
-            Portfolio
+            Projects
           </button>
-          <button onClick={() => window.location.replace("https://www.linkedin.com/in/nicklz/")}>
+          <button onClick={() => window.open("https://www.youtube.com/@NICKLZ22/videos", "_blank")}>
+            Videos
+          </button>
+          <button onClick={() => window.open("https://open.spotify.com/artist/7MhFAqUQR638zLxShAWudg?si=GgGSfYXdSEGoxcbZGl7e_g", "_blank")}>
+            Music
+          </button>
+          <button onClick={() => window.open("https://www.linkedin.com/in/nicklz/", "_blank")}>
             Contact
           </button>
-          <button onClick={() => window.location.replace("https://nicklz.com/resume/resume2022.pdf")}>
+          <button onClick={() => window.open("https://nicklz.com/resume/resume2022.pdf", "_blank")}>
             Resume
           </button>
 
-          <code className="footer">Powered by Drupal 10 + React Three Fiber (Typescript)<br />NICKLZ © 2023</code>
+          <code className="footer">Powered by Drupal 10 + React Three Fiber (Typescript)<br />NICKLZ © 2024</code>
         </header>
         <main>
           {page === 'overview' && (
