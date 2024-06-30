@@ -58,7 +58,7 @@ function App() {
             Overview
           </button>
           <button onClick={() => setContent('skills')}>
-            Code
+            Skills
           </button>
           <button onClick={() => setContent('portfolio')}>
             Projects
