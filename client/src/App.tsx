@@ -20,7 +20,7 @@ function App() {
     // Set content to 'close' on mobile devices
     const checkMobile = () => {
       if (window.innerWidth > 800) {
-        setContent('close');
+        setContent('music');
       }
     };
 
@@ -125,7 +125,7 @@ function App() {
               </article>
             </>
           )}
-          {page === 'close' && (
+          {page === 'music' && (
             <>
               <article className="content">
                 <span className="close" onClick={() => setContent('close')}>
