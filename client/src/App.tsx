@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { Hexagon } from './components/Hexagon';
 import { Block } from './components/Block';
@@ -6,10 +6,39 @@ import { Listing } from './components/Listing';
 
 import './App.css';
 
-function App() {
-  const [page, setContent] = useState('');
+// Extend the Window interface to include onSpotifyIframeApiReady
+declare global {
+  interface Window {
+    onSpotifyIframeApiReady: (IFrameAPI: any) => void;
+  }
+}
 
-  //TODO: clean this up with a constants file
+function App() {
+  const [page, setContent] = useState<string>('music');
+
+  useEffect(() => {
+    // Load Spotify SDK
+    const script = document.createElement("script");
+    script.src = "https://open.spotify.com/embed-podcast/iframe-api/v1";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      // Wait for Spotify's API to load
+      window.onSpotifyIframeApiReady = (IFrameAPI: any) => {
+        const element = document.getElementById('spotify-embed');
+        const options = {
+          uri: 'spotify:artist:7MhFAqUQR638zLxShAWudg'
+        };
+        const callback = (EmbedController: any) => { /* do nothing */ };
+        IFrameAPI.createController(element, options, callback);
+      };
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <>
@@ -37,7 +66,7 @@ function App() {
           <button onClick={() => window.open("https://www.youtube.com/@NICKLZ22/videos", "_blank")}>
             Videos
           </button>
-          <button onClick={() => window.open("https://open.spotify.com/artist/7MhFAqUQR638zLxShAWudg?si=GgGSfYXdSEGoxcbZGl7e_g", "_blank")}>
+          <button onClick={() => setContent('music')}>
             Music
           </button>
           <button onClick={() => window.open("https://www.linkedin.com/in/nicklz/", "_blank")}>
@@ -80,10 +109,22 @@ function App() {
               </article>
             </>
           )}
+          {page === 'music' && (
+            <>
+              <article className="content">
+                <span className="close" onClick={() => setContent('close')}>
+                  ✕
+                </span>
+                <div className="spotify-player">
+                  <div id="spotify-embed"></div>
+                </div>
+              </article>
+            </>
+          )}
         </main>
       </div>
-
     </>
   )
 }
+
 export default App;
