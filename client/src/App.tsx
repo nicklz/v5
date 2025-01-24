@@ -56,6 +56,8 @@ function App() {
     };
   }, []);
 
+
+
   return (
     <>
       <div className="app">
@@ -79,7 +81,7 @@ function App() {
           <button onClick={() => setContent('portfolio')}>
             Projects
           </button>
-          <button onClick={() => window.open("https://www.youtube.com/@NICKLZ22/videos", "_blank")}>
+          <button onClick={() => window.open("https://www.youtube.com/@NICKLZ22", "_blank")}>
             Videos
           </button>
           <button onClick={() => window.open("https://open.spotify.com/artist/7MhFAqUQR638zLxShAWudg?si=BsVfCXySTP2_jeEoxrDOmA", "_blank")}>
@@ -131,12 +133,51 @@ function App() {
                 <span className="close" onClick={() => setContent('close')}>
                   ✕
                 </span>
-                <div className="spotify-player">
-                  <div id="spotify-embed"></div>
+                <div className="spotify-player" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+
+                  {/* YouTube Embed */}
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/T-F_Gp4kllY?si=WJCxiVYR98vB97yc"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      flex: 1,
+                      borderRadius: '10px',
+                      maxWidth: '660px',
+                    }}
+                  ></iframe>
+                  
+                  {/* Spotify Player */}
+                  <div id="spotify-embed" style={{ flex: 1 }}></div>
+                  
+                  {/* Apple Music Embed */}
+                  <iframe
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                    frameBorder="0"
+                    height="450"
+                    style={{
+                      width: '100%',
+                      maxWidth: '660px',
+                      overflow: 'hidden',
+                      borderRadius: '10px',
+                      flex: 1,
+                    }}
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    src="https://embed.music.apple.com/us/album/celebrate-single/1791467963"
+                  ></iframe>
+
                 </div>
               </article>
             </>
           )}
+
+
+
         </main>
       </div >
     </>

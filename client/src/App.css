@@ -22,6 +22,20 @@ body {
   font-size: 52px;
   position: absolute;
 }
+.spotify-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 100%;
+}
+
+iframe {
+  min-width: 100%;
+  min-height: 400px;
+}
 
 .app-logo {
   max-block-size: 33vh;
