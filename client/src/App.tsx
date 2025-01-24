@@ -94,7 +94,7 @@ function App() {
             Resume
           </button>
 
-          <code className="footer">Powered by Drupal 10 + React Three Fiber (Typescript)<br />NICKLZ © 2024</code>
+          <code className="footer">Powered by Drupal 10 + React Three Fiber (Typescript)<br />NICKLZ © 2025</code>
         </header>
         <main>
           {page === 'overview' && (
@@ -151,7 +151,7 @@ function App() {
                       maxWidth: '660px',
                     }}
                   ></iframe>
-                  
+
                   {/* Spotify Player */}
                   <div id="spotify-embed" style={{ flex: 1 }}></div>
                   
