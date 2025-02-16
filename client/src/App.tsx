@@ -170,6 +170,22 @@ function App() {
                     sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                     src="https://embed.music.apple.com/us/album/celebrate-single/1791467963"
                   ></iframe>
+                  {/* New YouTube Embed */}
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/PlKkEcVosug"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      flex: 1,
+                      borderRadius: '10px',
+                      maxWidth: '660px',
+                    }}
+                  ></iframe>
 
                 </div>
               </article>
